@@ -1,5 +1,6 @@
 <script>
 import TheHeader from './components/TheHeader.vue';
+import axios from "axios";
 
 export default {
     components: { TheHeader },
@@ -12,7 +13,7 @@ export default {
   
     methods: {
       fetchProjects() {
-        
+        axios.get("http://127.0.0.1:8000/api/projects")
       }
     },
 
