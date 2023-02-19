@@ -1,14 +1,14 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-            <a class="navbar-brand" href="#">Progetto BootFolio</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-black">
+            <a class="navbar-brand ms-5 text-light bg-black" href="#">Progetto BootFolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center text-light" id="navbarNav">
                 <ul class="navbar-nav ">
-                    <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
-                        <a class="nav-link" :href="item.index">{{ item.label }}</a>
+                    <li class="nav-item " v-for="(item, index) in menuItems" :key="index">
+                        <a class="nav-link text-light" :href="item.index">{{ item.label }}</a>
                     </li>
                 </ul>
             </div>

@@ -28,11 +28,10 @@ export default {
 
 <template>
   <TheHeader></TheHeader>
-
-  <div class="container text-center">
+  <div class="text-center mt-5 bg-black text-light">
     <h4>Lista Progetti</h4>
 
-    <table class="table">
+    <table class="table mt-5 text-light">
       <thead>
         <tr>
           <th>Cover</th>
@@ -44,10 +43,10 @@ export default {
       </thead>
 
       <tbody>
-        <tr v-for="project in projects" :key="project.it" >
+        <tr v-for="project in projects" :key="project.id" >
           <td>
             <div v-if="project.cover_img">
-            <img src="http://127.0.0.1:8000/storage/img/the-lich-king.png" alt="" style="width: 60px">
+            <img src="/the-lich-king.png" alt="" style="width: 60px">
             </div>
           </td>
           <td>{{ project.title }}</td>
@@ -57,9 +56,19 @@ export default {
         </tr>
       </tbody>
     </table>
-
   </div>
 
+  <div class="d-flex justify-content-center gap-5 bg-black">
+    <div v-for="project in projects" :key="project.id" class="card my-5 text-center" style="width: 13rem;" >                        
+        <img class="card-img-top" src=/the-lich-king.png alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Title: {{ project.title }}</p>
+            <p class="card-text">User Id: {{ project.user_id }}</p>
+            <p class="card-text">Content: {{ project.content }}</p>
+            <p class="card-text">Status: {{ project.status }}</p>
+        </div>                    
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
