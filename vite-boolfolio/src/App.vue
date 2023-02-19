@@ -28,6 +28,7 @@ export default {
 
 <template>
   <TheHeader></TheHeader>
+  <router-view></router-view>
   <div class="text-center mt-5 bg-black text-light">
     <h4>Lista Progetti</h4>
 
