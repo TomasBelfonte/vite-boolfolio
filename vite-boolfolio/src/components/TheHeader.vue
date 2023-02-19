@@ -9,6 +9,7 @@
                 <ul class="navbar-nav ">
                     <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
                         <a class="nav-link text-light" :href="item.index">{{ item.label }}</a>
+                        <!-- <router-link :to="{ name: 'item.routeName' }" class="nav-link text-light" :href="item.index">{{ item.label }}</router-link>> -->
                     </li>
                 </ul>
             </div>
